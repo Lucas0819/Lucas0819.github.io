@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10"/>-->
+    <link href="./ol-debug.css" rel="stylesheet">
+    <script src="./ol-debug.js"></script>
+    <script src="./polyfill.js"></script>
+    <title>Document</title>
+    <style>
+        #map {
+            width: 460px;
+            height: 460px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" class="map"></div>
+    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg" />-->
+
+    <script type="text/javascript">
+        var imgWidth = 1132;
+        var imgHeight = 804;
+        var center = [0, 0];
+        var extent = [center[0] - imgWidth * 1000 / 2,
+            center[1] - imgHeight * 1000 / 2,
+            center[0] + imgWidth * 1000 / 2,
+            center[1] + imgHeight * 1000 / 2];
+
+        var map = new ol.Map({
+            view: new ol.View({
+                center: center,
+                zoom: 7
+            }),
+            target: 'map',
+            controls: [],
+            layers: [
+                new ol.layer.Image({
+                    source: new ol.source.ImageStatic({
+                        url: './planImage.svg',
+                        // url: './planImage.png',
+                        imageSize: [imgWidth, imgHeight],
+                        imageExtent: extent
+                    })
+                })
+            ]
+        });
+    </script>
+</body>
+</html>
