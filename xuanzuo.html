@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>盛卡恩自习室系统预约</title><link rel="stylesheet" type="text/css" href="StyleSheet.css"><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"UpdatePanel1","displayAfter":500,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script><script type="text/javascript">Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"UpdatePanel1","displayAfter":500,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+});
+</script></head>
+<body>
+<form name="form1" method="post" action="http://xuanzuo.hrbcu.edu.cn/roompre/ReaderLook.aspx" id="form1">
+    <div>
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="imageM">
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="14">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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Miw0NzYsOTEwLDQ3Nh8LCysEAh8MBQ0yN181MV82XzBfMDUxFgYfCgUfODY1LDQzNSw4OTYsNDM1LDg5Niw0NzUsODY1LDQ3NR8LCysEAh8MBQ0yN181Ml82XzBfMDUyFgYfCgUfODI0LDQzOCw4NTksNDM4LDg1OSw0NzUsODI0LDQ3NR8LCysEAh8MBQ0yN181M182XzBfMDUzFgYfCgUfNzc5LDQzNyw4MTIsNDM3LDgxMiw0NzcsNzc5LDQ3Nx8LCysEAh8MBQ0yN181NF82XzBfMDU0FgYfCgUfNzQwLDQzNSw3NzQsNDM1LDc3NCw0NzUsNzQwLDQ3NR8LCysEAh8MBQ0yN181NV82XzBfMDU1FgYfCgUfNjk0LDQzNiw3MjcsNDM2LDcyNyw0NzcsNjk0LDQ3Nx8LCysEAh8MBQ0yN181Nl82XzBfMDU2FgYfCgUfNjU1LDQzOCw2ODcsNDM4LDY4Nyw0NzcsNjU1LDQ3Nx8LCysEAh8MBQ0yN181N182XzBfMDU3FgYfCgUfNjA4LDQzNSw2NDUsNDM1LDY0NSw0NzYsNjA4LDQ3Nh8LCysEAh8MBQ0yN181OF82XzBfMDU4FgYfCgUfNTcwLDQzNiw2MDMsNDM2LDYwMyw0NzYsNTcwLDQ3Nh8LCysEAh8MBQ0yN181OV82XzBfMDU5FgYfCgUfNTI0LDQzOCw1NTgsNDM4LDU1OCw0NzgsNTI0LDQ3OB8LCysEAh8MBQ0yN182MF82XzBfMDYwFgYfCgUfNDg0LDQzOSw1MTYsNDM5LDUxNiw0NzYsNDg0LDQ3Nh8LCysEAh8MBQ0yN182MV82XzBfMDYxFgYfCgUfNDM3LDQzOSw0NzIsNDM5LDQ3Miw0NzUsNDM3LDQ3NR8LCysEAh8MBQ0yN182Ml82XzBfMDYyFgYfCgUfMzk3LDQzNiw0MzEsNDM2LDQzMSw0NzgsMzk3LDQ3OB8LCysEAh8MBQ0yN182M182XzBfMDYzFgYfCgUfMzUyLDQzNCwzODYsNDM0LDM4Niw0NzYsMzUyLDQ3Nh8LCysEAh8MBQ0yN182NF82XzBfMDY0FgYfCgUfMzEyLDM2NiwzNDcsMzY2LDM0NywzOTksMzEyLDM5OR8LCysEAh8MBQ0yN182NV82XzBfMDY1FgYfCgUfMzExLDMzMywzNDgsMzMzLDM0OCwzNjUsMzExLDM2NR8LCysEAh8MBQ0yN182Nl82XzBfMDY2FgYfCgUfMjY1LDM2NSwzMDMsMzY1LDMwMywzOTksMjY1LDM5OR8LCysEAh8MBQ0yN182N182XzBfMDY3FgYfCgUfMjY0LDMyNywzMDIsMzI3LDMwMiwzNjUsMjY0LDM2NR8LCysEAh8MBQ0yN182OF82XzBfMDY4FgYfCgUfMzEwLDQ0NywzNDYsNDQ3LDM0Niw0ODAsMzEwLDQ4MB8LCysEAh8MBQ0yN182OV82XzBfMDY5FgYfCgUfMzEwLDQxMiwzNDcsNDEyLDM0Nyw0NDcsMzEwLDQ0Nx8LCysEAh8MBQ0yN183MF82XzBfMDcwFgYfCgUfMjY0LDQ0MywzMDIsNDQzLDMwMiw0NzgsMjY0LDQ3OB8LCysEAh8MBQ0yN183MV82XzBfMDcxFgYfCgUfMjYxLDQwOSwzMDIsNDA5LDMwMiw0NDIsMjYxLDQ0Mh8LCysEAh8MBQ0yN183Ml82XzBfMDcyFgYfCgUfOTA2LDUyMiw5NDcsNTIyLDk0Nyw1NTQsOTA2LDU1NB8LCysEAh8MBQ0yN183M182XzBfMDczFgYfCgUfOTA2LDQ5Miw5NDcsNDkyLDk0Nyw1MjEsOTA2LDUyMR8LCysEAh8MBQ0yN183NF82XzBfMDc0FgYfCgUfODY1LDUyMiw4OTcsNTIyLDg5Nyw1NTUsODY1LDU1NR8LCysEAh8MBQ0yN183NV82XzBfMDc1FgYfCgUfODY0LDQ4OSw4OTYsNDg5LDg5Niw1MjEsODY0LDUyMR8LCysEAh8MBQ0yN183Nl82XzBfMDc2FgYfCgUfODIzLDUyMiw4NTQsNTIyLDg1NCw1NTQsODIzLDU1NB8LCysEAh8MBQ0yN183N182XzBfMDc3FgYfCgUfODIyLDQ5MSw4NTcsNDkxLDg1Nyw1MjIsODIyLDUyMh8LCysEAh8MBQ0yN183OF82XzBfMDc4FgYfCgUfNzc4LDUyMiw4MTEsNTIyLDgxMSw1NTYsNzc4LDU1Nh8LCysEAh8MBQ0yN183OV82XzBfMDc5FgYfCgUfNzc3LDQ4OCw4MTMsNDg4LDgxMyw1MjIsNzc3LDUyMh8LCysEAh8MBQ0yN184MF82XzBfMDgwFgYfCgUfNzM5LDUyMiw3NzIsNTIyLDc3Miw1NTMsNzM5LDU1Mx8LCysEAh8MBQ0yN184MV82XzBfMDgxFgYfCgUfNzM4LDQ4OSw3NzMsNDg5LDc3Myw1MjEsNzM4LDUyMR8LCysEAh8MBQ0yN184Ml82XzBfMDgyFgYfCgUfNjkxLDUyMiw3MjksNTIyLDcyOSw1NTMsNjkxLDU1Mx8LCysEAh8MBQ0yN184M182XzBfMDgzFgYfCgUfNjg5LDQ5MSw3MjgsNDkxLDcyOCw1MjIsNjg5LDUyMh8LCysEAh8MBQ0yN184NF82XzBfMDg0FgYfCgUfNjUzLDUyMiw2ODYsNTIyLDY4Niw1NTMsNjUzLDU1Mx8LCysEAh8MBQ0yN184NV82XzBfMDg1FgYfCgUfNjUzLDQ5MSw2ODcsNDkxLDY4Nyw1MjEsNjUzLDUyMR8LCysEAh8MBQ0yN184Nl82XzBfMDg2FgYfCgUfNjA0LDUyMiw2NDMsNTIyLDY0Myw1NTMsNjA0LDU1Mx8LCysEAh8MBQ0yN184N182XzBfMDg3FgYfCgUfNjA1LDQ4OCw2NDQsNDg4LDY0NCw1MjIsNjA1LDUyMh8LCysEAh8MBQ0yN184OF82XzBfMDg4FgYfCgUfNTY4LDUyMiw2MDEsNTIyLDYwMSw1NTMsNTY4LDU1Mx8LCysEAh8MBQ0yN184OV82XzBfMDg5FgYfCgUfNTY4LDQ4Nyw2MDEsNDg3LDYwMSw1MjEsNTY4LDUyMR8LCysEAh8MBQ0yN185MF82XzBfMDkwFgYfCgUfNTIwLDUyMyw1NTgsNTIzLDU1OCw1NTQsNTIwLDU1NB8LCysEAh8MBQ0yN185MV82XzBfMDkxFgYfCgUfNTE5LDQ4OSw1NTgsNDg5LDU1OCw1MjMsNTE5LDUyMx8LCysEAh8MBQ0yN185Ml82XzBfMDkyFgYfCgUfNDgzLDUyMiw1MTgsNTIyLDUxOCw1NTQsNDgzLDU1NB8LCysEAh8MBQ0yN185M182XzBfMDkzFgYfCgUfNDgyLDQ5MCw1MTYsNDkwLDUxNiw1MjEsNDgyLDUyMR8LCysEAh8MBQ0yN185NF82XzBfMDk0FgYfCgUfNDM4LDUyMiw0NzEsNTIyLDQ3MSw1NTUsNDM4LDU1NR8LCysEAh8MBQ0yN185NV82XzBfMDk1FgYfCgUfNDM4LDQ5MCw0NzIsNDkwLDQ3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XzBfMTI1FgYfCgUfNTY3LDU2NSw2MDQsNTY1LDYwNCw1OTksNTY3LDU5OR8LCysEAh8MBQ4yN18xMjZfNl8wXzEyNhYGHwoFHzUyNCw2MDAsNTU2LDYwMCw1NTYsNjMxLDUyNCw2MzEfCwsrBAIfDAUOMjdfMTI3XzZfMF8xMjcWBh8KBR81MjQsNTY5LDU1OSw1NjksNTU5LDYwMCw1MjQsNjAwHwsLKwQCHwwFDjI3XzEyOF82XzBfMTI4FgYfCgUfNDg1LDYwMCw1MTcsNjAwLDUxNyw2MzEsNDg1LDYzMR8LCysEAh8MBQ4yN18xMjlfNl8wXzEyORYGHwoFHzQ4Myw1NzEsNTE3LDU3MSw1MTcsNTk5LDQ4Myw1OTkfCwsrBAIfDAUOMjdfMTMwXzZfMF8xMzAWBh8KBR80MzgsNjAxLDQ3NCw2MDEsNDc0LDYzMyw0MzgsNjMzHwsLKwQCHwwFDjI3XzEzMV82XzBfMTMxFgYfCgUfNDM3LDU3MCw0NzQsNTcwLDQ3NCw2MDAsNDM3LDYwMB8LCysEAh8MBQ4yN18xMzJfNl8wXzEzMhYGHwoFHzM5OCw2MDAsNDMyLDYwMCw0MzIsNjMyLDM5OCw2MzIfCwsrBAIfDAUOMjdfMTMzXzZfMF8xMzMWBh8KBR8zOTcsNTY1LDQzNCw1NjUsNDM0LDYwMCwzOTcsNjAwHwsLKwQCHwwFDjI3XzEzNF82XzBfMTM0FgYfCgUfMzUzLDYwMCwzODksNjAwLDM4OSw2MzEsMzUzLDYzMR8LCysEAh8MBQ4yN18xMzVfNl8wXzEzNRYGHwoFHzM1MSw1NjgsMzkwLDU2OCwzOTAsNjAxLDM1MSw2MDEfCwsrBAIfDAUOMjdfMTM2XzZfMF8xMzYWBh8KBR8zMTAsNjAwLDM0OCw2MDAsMzQ4LDYzMiwzMTAsNjMyHwsLKwQCHwwFDjI3XzEzN182XzBfMTM3FgYfCgUfMzEwLDU2OCwzNDcsNTY4LDM0Nyw2MDAsMzEwLDYwMB8LCysEAh8MBQ4yN18xMzhfNl8wXzEzOBYGHwoFHzI2NCw2MDAsMzAxLDYwMCwzMDEsNjMyLDI2NCw2MzIfCwsrBAIfDAUOMjdfMTM5XzZfMF8xMzkWBh8KBR8yNjIsNTY4LDMwMCw1NjgsMzAwLDU5OSwyNjIsNTk5HwsLKwQCHwwFDjI3XzE0MF82XzBfMTQwFCsBjAECAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICZAITDw8WAh8DZWRkZKo/azgA6g7eKLT+0l9hwmnbgOsH">
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['form1'];
+        if (!theForm) {
+            theForm = document.form1;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+
+
+    <script src="/roompre/WebResource.axd?d=Ov1cQvhpubRO3L3kd0le4hrAs_P-QVhj18geS9a1LX7vk314VKsnr6y_2Qp2V1jMumRfeuqNuERLjgjf0edXHQxPE5A1&amp;t=634244902260000000" type="text/javascript"></script>
+
+
+    <script src="/roompre/ScriptResource.axd?d=lbCTNc1_vAGqiX2VLshoCQJGpFrRrfwPcfNKyQ0IwTtFcQG-Kr-AiOx0Kq5WXu4raEo2DsCLHNugHhK3pfsvddC-ZHwxsgDuaJMjT3UYsbVRZe246rVNZ5Vyo-6CoqZilw0Zlw2&amp;t=633049125920000000" type="text/javascript"></script>
+    <script src="/roompre/ScriptResource.axd?d=v6UTQZUwL-aVFJuOpxw2oVlkFKHl3hAxlDvlzLfwpYwjbOyDdhVUd3QYLGHP72Uc2TBBJUnYKCNeHrXdvYPPtDC8UWDJUPbG9lebFt-2ITn1fsg2Pq9BBkkf2i7WIyaj_n5lrg2&amp;t=633049125920000000" type="text/javascript"></script>
+    <div>
+
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKqhJkKAoTZm6gDAtGryLEGAqqhguQIZi0j7guLvfg6RTO3JC8iMJGvyNE=">
+    </div>
+    <div>
+        <script type="text/javascript">
+            //<![CDATA[
+            Sys.WebForms.PageRequestManager._initialize('ScriptManager1', document.getElementById('form1'));
+            Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tUpdatePanel1'], [], ['Button_usermanage'], 90);
+            //]]>
+        </script>
+
+        <table style="left: 5%; position: absolute" width="1024"><tbody><tr><td>
+            <div id="UpdatePanel1">
+                <table>
+                    <tbody><tr><td style="font-weight: bold; font-size: 50px; color: blue; font-family: 华文楷体" align="center" height="70">
+                        <span id="Label_school_name">哈尔滨商业大学图书馆座位预约系统</span>
+                    </td></tr>
+                    <tr><td align="right"><a href="preRuler.htm" target="_blank">预约规则</a>
+                        <input type="submit" name="Button_usermanage" value="用户管理 " id="Button_usermanage">
+                    </td></tr>
+                    <tr><td align="center">
+                        <div id="UpdateProgress1" style="display:none;">
+
+                            <span style="color: #ff0066"><strong>正在处理数据... </strong></span>
+
+                        </div>
+                    </td></tr>
+                    <tr><td>
+                        <span id="Label_name" style="color:#000099;font-size:Medium;font-weight:bold;">用户您好!</span></td></tr>
+                    <tr><td>
+                        <span id="Label_black" style="color:Red;"></span></td></tr>
+                    <tr><td><span id="Label_preblack" style="color:Red;">您已有2次预约违规,预约违规满3次,暂停预约3天</span></td></tr>
+                    <tr><td>
+                        <div id="Paneltemp" style="width:1150px;">
+
+                            <span class="big" style="background-color:Yellow;">您选定的预约座位是"三楼北侧自习区",015号座位,预约场次为6点0分</span><input type="submit" name="27_15_6_0_015_d" value="确定" id="27_15_6_0_015_d" class="button2"><input type="submit" name="cacel" value="取消" id="cacel" class="button3">
+                        </div>
+                    </td></tr>
+                    <tr><td>
+
+                    </td></tr>
+                    <tr><td>
+                        <div id="Panel1">
+
+                            <table>
+                                <tbody><tr><td colspan="2">
+                                    <div id="Panel_libplaces">
+
+                                    </div>
+                                </td></tr>
+                                <tr><td valign="top">
+                                    <div id="Panel_rooms" style="width:300px;">
+
+                                    </div>
+                                </td><td valign="top">
+                                    <div id="Panel6" style="width:800px;">
+
+                                    </div>
+                                    <div id="Panel3" style="width:800px;">
+
+                                    </div>
+                                    <div id="Panel4" style="width:800px;">
+
+                                    </div>
+                                    <div id="Panel5" style="width:800px;">
+
+                                    </div>
+                                    <div id="Panel_buguizhe">
+
+                                    </div>
+                                </td></tr>
+                                </tbody></table>
+
+                        </div>
+                    </td></tr>
+                    <tr><td>
+                        &nbsp;</td></tr>
+                    <tr><td>
+                        &nbsp;</td></tr>
+                    <tr>
+                        <td align="center">
+                            <span id="Label_error" style="display:inline-block;color:Red;width:700px;"></span>
+                            <div id="Panel_seats">
+
+                            </div>
+                        </td>
+
+                    </tr>
+                    </tbody></table>
+            </div>
+        </td></tr></tbody></table>
+    </div>
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.Application.initialize();
+        Sys.Application.add_init(function() {
+            $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"UpdatePanel1","displayAfter":500,"dynamicLayout":true}, null, null, $get("UpdateProgress1"));
+        });
+        //]]>
+    </script>
+</form>
+
+
+</body></html>
