@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-id="seatmap" width="1029px" height="771px" viewBox="0 0 1029 771" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Winter Garden Theatre</title>
+    <g data-id="theater-wintergarden" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g data-id="base" transform="translate(31.000000, 1.000000)">
+            <g data-id="stage" transform="translate(295.000000, 0.000000)">
+                <path d="M189,75 C114.396528,75 52.0912681,61.3272105 0.822414688,35.4397402 L27.0740741,0 L349.925926,0 L376.285291,35.5851425 C325.214473,61.3821455 263.198036,75 189,75 Z" data-id="stage-background" stroke="#DDDDDD" fill="#EEEEEE"></path>
+            </g>
+            <g data-id="area-orchestra" transform="translate(41.000000, 28.000000)">
+                <path d="M442.5,48 C514.769307,48 583.09032,31.2071746 643.724547,1.33528568 L880.99929,143.89945 L881.012176,305.54459 C774.682014,420.817409 621.520523,496.14073 450.789802,498.920349 L441,499 C266.339589,499 109.345501,423.015978 0.986901935,305.543591 L0.999289602,143.89345 L239.62489,0.517949363 C300.668701,30.9006846 369.574173,48 442.5,48 Z" data-id="background-orchestra" stroke="#DDDDDD" fill="#FFFFFF"></path>
+            </g>
+            <g data-id="area-mezzanine" transform="translate(0.000000, 386.000000)">
+                <path d="M964,3 L964.009259,212.585325 C856.643769,320.588417 680.760914,383.243198 482,383.243198 C283.239213,383.243198 107.356457,320.588497 -0.00905217414,212.585533 L-8.73114914e-11,3 L57.1264286,3.00531468 C164.714668,113.400022 315.312168,182 482,182 C648.687832,182 799.285332,113.400022 906.873572,3.00531468 L964,3 Z" data-id="background-mezzanine" stroke="#DDDDDD" fill="#FFFFFF"></path>
+            </g>
+        </g>
+        <g data-id="layers" transform="translate(0.000000, 79.000000)">
+            <g data-id="labelsrowsseats" transform="translate(55.000000, 0.000000)" fill="#444444" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="5" font-weight="bold">
+                <g data-id="labelsrows" transform="translate(79.000000, 0.000000)">
+                    <g data-id="labels-mezzanine" transform="translate(0.000000, 447.000000)">
+                    </g>
+                </g>
+            </g>
+            <g data-id="overhangindicators" transform="translate(0.000000, 112.000000)">
+                <g data-id="overhang-mezzanine">
+                    <path d="M72.5,3 L73,5 L2,5 L2,203 L31,203 L31,205 L0,205 L0,3 L72.5,3 Z M1029,0 L1029,205 L995,205 L995,203 L1027,203 L1027,2 L953.5,2 L953,0 L1029,0 Z" data-id="overhang-background" fill="#DDDDDD"></path>
+                </g>
+            </g>
+            <g data-id="labelsareas" transform="translate(423.000000, 114.000000)" fill="#444444" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="36" font-weight="bold" letter-spacing="0.349051">
+            </g>
+        </g>
+    </g>
+</svg>
