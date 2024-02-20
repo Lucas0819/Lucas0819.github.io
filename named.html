@@ -14,128 +14,126 @@
     padding: 0 8px;
     font-size: 16px;
   }
+  .selection {
+    margin: 12px;
+    font-size: 16px;
+  }
 </style>
 <body>
-  <h1>What's your name? v2.1</h1>
-  <div>
-    <h4>length</h4>
-    <button onclick="getName(1)">length 2</button>
-    <button onclick="getName(2)">length 3</button>
-  </div>
-  <div>
-    <h4>length & sound</h4>
-    <button onclick="getNameBySound(1, 0, 0)">刘ā</button>
-    <button onclick="getNameBySound(1, 1, 1)">刘á</button>
-    <button onclick="getNameBySound(1, 2, 2)">刘ǎ</button>
-    <button onclick="getNameBySound(1, 3, 3)">刘à</button>
-    <br>
-    <br>
-    <button onclick="getNameBySound(2, 0, 0)">刘āā</button>
-    <button onclick="getNameBySound(2, 0, 1)">刘āá</button>
-    <button onclick="getNameBySound(2, 0, 2)">刘āǎ</button>
-    <button onclick="getNameBySound(2, 0, 3)">刘āà</button>
-    <br>
-    <br>
-    <button onclick="getNameBySound(2, 1, 0)">刘áā</button>
-    <button onclick="getNameBySound(2, 1, 1)">刘áá</button>
-    <button onclick="getNameBySound(2, 1, 2)">刘áǎ</button>
-    <button onclick="getNameBySound(2, 1, 3)">刘áà</button>
-    <br>
-    <br>
-    <button onclick="getNameBySound(2, 2, 0)">刘ǎā</button>
-    <button onclick="getNameBySound(2, 2, 1)">刘ǎá</button>
-    <button onclick="getNameBySound(2, 2, 2)">刘ǎǎ</button>
-    <button onclick="getNameBySound(2, 2, 3)">刘ǎà</button>
-    <br>
-    <br>
-    <button onclick="getNameBySound(2, 3, 0)">刘àā</button>
-    <button onclick="getNameBySound(2, 3, 1)">刘àá</button>
-    <button onclick="getNameBySound(2, 3, 2)">刘àǎ</button>
-    <button onclick="getNameBySound(2, 3, 3)">刘àà</button>
-  </div>
-  <p>My name is <b><span id="name"></span></b></p>
-  <!-- TODO 同音换字 -->
+<h1>What's your name? v2.2</h1>
+<div>
+  <h4>length</h4>
+  <button onclick="getName(1)">length 2</button>
+  <button onclick="getName(2)">length 3</button>
+</div>
+<div>
+  <h4>length & sound</h4>
+  <button onclick="getNameBySound(1, 0, 0)">刘ā</button>
+  <button onclick="getNameBySound(1, 1, 1)">刘á</button>
+  <button onclick="getNameBySound(1, 2, 2)">刘ǎ</button>
+  <button onclick="getNameBySound(1, 3, 3)">刘à</button>
+  <br>
+  <br>
+  <button onclick="getNameBySound(2, 0, 0)">刘āā</button>
+  <button onclick="getNameBySound(2, 0, 1)">刘āá</button>
+  <button onclick="getNameBySound(2, 0, 2)">刘āǎ</button>
+  <button onclick="getNameBySound(2, 0, 3)">刘āà</button>
+  <br>
+  <br>
+  <button onclick="getNameBySound(2, 1, 0)">刘áā</button>
+  <button onclick="getNameBySound(2, 1, 1)">刘áá</button>
+  <button onclick="getNameBySound(2, 1, 2)">刘áǎ</button>
+  <button onclick="getNameBySound(2, 1, 3)">刘áà</button>
+  <br>
+  <br>
+  <button onclick="getNameBySound(2, 2, 0)">刘ǎā</button>
+  <button onclick="getNameBySound(2, 2, 1)">刘ǎá</button>
+  <button onclick="getNameBySound(2, 2, 2)">刘ǎǎ</button>
+  <button onclick="getNameBySound(2, 2, 3)">刘ǎà</button>
+  <br>
+  <br>
+  <button onclick="getNameBySound(2, 3, 0)">刘àā</button>
+  <button onclick="getNameBySound(2, 3, 1)">刘àá</button>
+  <button onclick="getNameBySound(2, 3, 2)">刘àǎ</button>
+  <button onclick="getNameBySound(2, 3, 3)">刘àà</button>
+</div>
+<div class="selection">
+  <span>second:</span>
+  <select id="second_name">
+    <option value="1">阿</option>
+  </select>
+  <span>third:</span>
+  <select id="third_name">
+    <option value="1">阿</option>
+  </select>
+  <button onclick="clearFixedName">clear</button>
+</div>
+<p>My name is <b><span id="name"></span></b></p>
+<!-- TODO 同音换字 -->
 </body>
 <script type="text/javascript">
   const nameList = [
     // a
     [['阿'], [], [], []],
     // an
-    [['安'], [], [], ['暗']],
+    [['安'], [], [], []],
     // ao
-    [[], [], [], ['奥', '傲']],
+    [[], [], [], ['傲']],
     // ai
-    [[], [], [], ['爱', '艾']],
-    // ang
-    [[], ['昂'], [], []],
-
-    // ou
-    [['欧'], [], [], []],
+    [[], [], [], ['艾']],
 
     // bai
-    [[], ['白'], ['百', '柏'], []],
+    [[], ['白'], ['百'], []],
     // bo
-    [['波', '玻'], ['伯', '博', '铂'], [], []],
+    [['玻'], ['博'], [], []],
     // bao
-    [['包'], [], ['保'], []],
+    [['包'], [], [], []],
     // bei
     [[], [], ['北'], ['贝']],
     // bing
-    [['冰', '兵'], [], ['丙', '炳'], []],
+    [['冰'], [], ['炳'], []],
     // ben
-    [['奔'], [], ['本'], ['奔']],
+    [['奔'], [], ['本'], []],
     // bi
-    [[], [], ['彼'], ['毕']],
+    [[], [], ['彼'], []],
     // bu
-    [[], [], ['卜'], ['部', '步']],
+    [[], [], ['卜'], []],
 
     // pei
     [[], ['培'], [], []],
     // ping
     [[], ['平'], [], []],
     // pang
-    [[], ['庞', '滂'], [], []],
+    [[], ['庞'], [], []],
     // peng
-    [[], ['朋', '鹏', '蓬', '澎'], [], []],
-    // pi
-    [['丕'], [], [], []],
+    [[], ['朋', '鹏'], [], []],
     // pu
-    [[], [], ['朴', '普'], []],
-    // piao
-    [['飘'], [], [], []],
+    [[], [], ['普'], []],
     // pian
     [[], [], [], ['片']],
     // pin
     [[], [], ['品'], []],
-    // po
-    [['颇'], [], [], ['迫', '魄', '珀']],
-    // pai
-    [[], [], [], ['湃']],
 
     // mo
-    [[], [], [], ['末', '墨', '默', '莫', '沫', '陌']],
+    [[], [], [], ['末', '莫', '沫', '陌']],
     // mou
-    [[], ['眸', '谋'], ['某'], []],
+    [[], ['谋'], [], []],
     // min
     [[], ['民'], ['珉'], []],
     // ming
-    [[], ['明', '鸣', '铭', '名', '茗', '冥', '溟'], [], []],
+    [[], ['明', '鸣', '铭'], [], []],
     // mian
     [[], [], ['免', '勉'], []],
     // miao
     [[], ['苗'], [], ['妙']],
-    // mei
-    [[], ['玫'], [], []],
     // mao
-    [[], ['毛'], ['卯'], ['茂']],
+    [[], ['毛'], [], ['茂']],
     // mai
-    [[], ['埋'], [], ['麦', '迈', '脉']],
+    [[], [], [], ['麦']],
     // mang
     [[], ['芒'], [], []],
-    // ma
-    [[], ['麻'], [], []],
     // mi
-    [[], ['迷'], ['米'], ['蜜', '觅']],
+    [[], [], ['米'], []],
     // mu
     [[], [], [], ['穆', '沐']],
 
@@ -144,63 +142,63 @@
     // fang
     [['方'], [], [], []],
     // fei
-    [['非', '飞', '霏'], [], ['翡'], ['费']],
+    [['非', '飞'], [], ['翡'], ['费']],
     // fen
-    [['分', '汾', '纷'], [], [], ['奋']],
+    [['分', '汾'], [], [], []],
     // feng
-    [['风', '丰', '封', '峰', '锋', '枫'], [], [], ['奉']],
+    [['风', '丰'], [], [], ['奉']],
     // fu
     [['夫'], [], ['辅'], ['复', '富', '赋']],
 
     // da
     [[], ['达', '龘'], [], []],
     // duan
-    [['端'], [], [], ['段', '锻']],
+    [['端'], [], [], []],
     // dan
-    [['单', '丹'], [], [], ['旦']],
+    [['单'], [], [], ['旦']],
     // dang
     [['当'], [], [], ['荡', '宕']],
     // di
-    [[], ['迪', '笛', '狄'], [], ['地', '弟']],
+    [[], ['迪'], [], ['地', '弟']],
     // diao
-    [['刁', '凋'], [], [], []],
+    [['刁'], [], [], []],
     // ding
-    [['丁', '玎'], [], ['鼎'], []],
+    [['丁'], [], ['鼎'], []],
     // dao
     [[], [], ['岛'], ['道', '稻']],
     // dong
-    [['东', '冬'], [], [], ['洞', '栋']],
+    [['东', '冬'], [], [], ['栋']],
     // deng
     [['登'], [], [], []],
     // die
     [['蝶', '迭'], [], [], []],
     // du
-    [[], [], [], ['度', '杜']],
+    [[], [], [], ['度']],
     // duo
     [['多'], [], ['朵'], []],
     // dun
     [['敦'], [], [], ['顿']],
     // dian
-    [[], [], ['典', '点'], ['电', '殿']],
+    [[], [], ['典', '点'], ['电']],
 
     // tan
-    [[], ['檀', '谭'], [], []],
+    [[], ['檀'], [], []],
     // tian
-    [['天', '添'], ['田', '甜', '恬'], [], []],
+    [['天', '添'], ['甜', '恬'], [], []],
     // tai
-    [[], ['台'], [], ['太', '泰', '态']],
+    [[], ['台'], [], ['太', '泰']],
     // tang
-    [[], ['唐', '堂', '糖', '棠'], [], []],
+    [[], ['棠'], [], []],
     // tong
-    [['通'], ['同', '桐', '童', '彤'], ['统'], []],
+    [[], ['同', '彤'], [], []],
     // te
     [[], [], [], ['特']],
     // teng
     [[], ['腾', '藤'], [], []],
     // ting
-    [['听', '汀'], ['庭', '亭', '霆'], [], []],
+    [['听', '汀'], ['霆'], [], []],
     // tu
-    [[], ['图', '途', '徒', '涂'], [], []],
+    [[], ['图'], [], []],
     // tuan
     [['湍'], ['团'], [], []],
 
@@ -209,24 +207,22 @@
     // nan
     [[], ['南', '楠'], [], []],
     // niao
-    [[], [], ['鸟', '袅'], []],
+    [[], [], ['袅'], []],
     // nian
     [[], ['年'], [], ['念']],
     // ning
-    [[], ['宁', '柠'], [], []],
+    [[], ['柠'], [], []],
     // nuo
     [[], [], [], ['诺']],
     // nuan
     [[], [], ['暖'], []],
 
     // lan
-    [[], ['兰', '蓝', '岚'], [], []],
-    // lou
-    [[], ['楼'], [], []],
+    [[], ['兰', '岚'], [], []],
     // lang
-    [[], ['郎', '琅'], ['朗'], ['浪']],
+    [[], ['琅'], ['朗'], ['浪']],
     // long
-    [[], ['龙', '隆', '珑', '胧', '泷'], [], []],
+    [[], ['珑'], [], []],
     // le
     [[], [], [], ['乐', '勒']],
     // leng
@@ -234,34 +230,32 @@
     // lei
     [[], [], ['磊'], ['类']],
     // liao
-    [[], ['寥', '缭'], ['了'], []],
+    [[], ['寥'], ['了'], []],
     // lin
-    [[], ['林', '琳', '霖', '临', '麟', '淋', '嶙'], ['凛'], []],
+    [[], ['林', '麟', '霖'], ['凛'], []],
     // liu
-    [[], ['流', '琉', '浏'], ['柳'], []],
+    [[], ['琉', '浏'], ['柳'], []],
     // ling
     [[], ['凌', '零', '龄'], ['翎'], []],
     // li
-    [[], ['黎', '璃'], ['礼', '理'], ['立', '力', '利', '厉', '雳']],
+    [[], ['黎', '璃'], ['礼', '理'], ['立', '力', '雳']],
     // lu
-    [[], [], [], ['陆', '路', '露']],
+    [[], [], [], ['陆', '露']],
     // luo
     [[], [], [], ['洛']],
     // lai
-    [[], ['莱', '涞'], [], ['籁']],
+    [[], ['涞'], [], ['籁']],
     // lian
     [[], ['连', '琏'], ['敛'], []],
     // liang
     [[], ['良', '凉'], ['两'], ['亮']],
     // luan
-    [[], ['峦'], [], ['乱']],
+    [[], ['峦'], [], []],
     // lun
     [[], ['伦', '仑', '沦', '纶'], [], []],
     // lue
     [[], [], [], ['略']],
 
-    // gai
-    [[], [], [], ['盖', '概']],
     // gan
     [['甘'], [], [], []],
     // ge
@@ -269,22 +263,20 @@
     // gang
     [['刚', '纲'], [], [], []],
     // gong
-    [['工', '公', '恭', '弓'], [], [], []],
+    [['恭'], [], [], []],
     // gu
-    [['孤'], [], ['古', '谷'], ['顾', '固', '故']],
+    [[], [], ['古', '谷'], ['故']],
     // guan
-    [['观', '官'], [], ['管'], ['贯', '冠']],
+    [['观'], [], ['管'], ['冠']],
     // guo
     [[], ['国'], ['果'], []],
     // guang
     [['光'], [], ['广'], []],
-    // gui
-    [['归', '规', '圭'], [], [], []],
     // geng
-    [['更', '耕', '庚'], [], [], []],
+    [['更'], [], [], []],
 
     // kai
-    [['开'], [], ['凯', '慨', '恺'], []],
+    [['开'], [], ['凯'], []],
     // ka
     [['咖'], [], ['卡'], []],
     // kao
@@ -292,7 +284,7 @@
     // kang
     [['康'], [], [], ['亢']],
     // kong
-    [['空'], [], ['孔'], []],
+    [['空'], [], [], []],
     // ke
     [['科'], [], ['可'], ['克', '客']],
     // kui
@@ -302,58 +294,50 @@
     [[], ['华'], [], ['化', '画']],
     // hai
     [[], [], ['海'], ['亥']],
-    // hou
-    [[], ['候'], [], []],
     // hong
-    [[], ['红', '洪', '宏', '鸿', '虹', '弘'], [], []],
-    // huang
-    [['荒'], ['黄', '皇'], [], []],
-    // hun
-    [[], ['魂'], [], []],
+    [[], ['红', '宏', '鸿', '虹', '弘'], [], []],
     // huo
     [[], [], ['火'], []],
     // huan
-    [['欢'], ['环'], [], ['幻', '焕']],
+    [['欢'], [], [], ['焕']],
     // hui
-    [['灰', '辉'], ['回'], [], ['惠', '汇', '绘']],
+    [['灰', '辉'], [], [], ['惠', '汇']],
     // hao
-    [[], ['毫', '豪'], [], ['号', '浩', '皓', '昊']],
+    [[], ['毫', '豪'], [], ['皓', '昊']],
     // han
     [[], ['含', '寒', '涵'], [], ['翰']],
     // hang
     [[], ['航', '杭'], [], []],
     // he
-    [[], ['合', '河', '禾'], [], ['赫', '贺']],
+    [[], ['合', '禾'], [], ['赫', '贺']],
     // heng
-    [[], ['衡', '恒', '珩'], [], []],
+    [[], ['衡', '恒'], [], []],
 
     // jia
     [['家', '佳', '嘉'], [], ['甲'], []],
     // jun
-    [['军', '君'], [], [], ['俊', '峻']],
+    [['军', '君'], [], [], ['俊']],
     // jue
-    [[], ['决', '觉', '绝', '诀'], [], []],
+    [[], ['决', '觉', '绝'], [], []],
     // jie
     [[], ['节', '杰'], ['解'], ['界']],
     // jin
-    [['金', '今', '津'], [], ['谨', '瑾'], ['尽']],
+    [['金', '今', '津'], [], ['瑾'], ['尽']],
     // jing
     [['经', '京'], [], ['景'], ['境', '敬', '靖']],
     // jian
-    [['间', '坚'], [], ['简'], ['见', '健', '剑']],
+    [['间', '坚'], [], ['简'], ['健', '剑']],
     // jiang
     [['江'], [], [], []],
-    // jiao
-    [['交', '焦'], [], ['角'], []],
     // jiu
     [[], [], ['九', '久', '玖'], []],
     // ji
-    [[], ['及', '吉'], ['几'], ['计', '系', '纪']],
+    [[], ['及', '吉'], [], ['计', '纪']],
 
     // qian
     [['千', '谦', '芊'], ['乾'], [], []],
     // qiang
-    [['羌'], ['强'], [], []],
+    [[], ['强'], [], []],
     // qing
     [['清', '轻', '青', '卿'], ['晴', '擎'], [], ['庆']],
     // qin
@@ -378,7 +362,7 @@
     // xian
     [['先'], ['贤'], ['显'], ['现']],
     // xiang
-    [['相', '湘'], ['详', '翔'], [], ['相', '向']],
+    [['香'], ['详', '翔'], [], ['向']],
     // xiao
     [['萧', '霄'], [], ['小'], ['笑']],
     // xin
@@ -403,7 +387,7 @@
     // zhang
     [['彰'], [], [], []],
     // zhao
-    [['昭'], [], [], ['照', '召', '兆', ]],
+    [['昭'], [], [], ['照', '召', '兆']],
     // zhe
     [[], ['哲'], ['者'], []],
     // zhen
@@ -434,11 +418,11 @@
     // chen
     [['琛'], ['晨', '尘', '辰'], [], []],
     // cheng
-    [[], ['成', '城', '乘', '呈', '诚', '丞'], [], []],
+    [[], ['诚', '丞'], [], []],
     // chi
     [[], ['迟', '池'], ['尺'], ['斥']],
     // chang
-    [[], ['长', '常'], [], ['畅']],
+    [[], ['常'], [], ['畅']],
     // chuan
     [['川'], ['传'], [], []],
     // chun
@@ -493,13 +477,13 @@
     [[], [], [], ['日']],
 
     // zong
-    [['宗'], [], ['总'], ['纵']],
+    [['宗'], [], [], ['纵']],
     // zu
     [[], [], ['组', '祖'], []],
     // zun
     [['尊'], [], [], []],
     // ze
-    [[], ['则', '泽', '择'], [], []],
+    [[], ['泽', '择'], [], []],
     // zai
     [['哉'], [], [], []],
     // zi
@@ -523,7 +507,7 @@
     // sai
     [[], [], [], ['塞', '赛']],
     // san
-    [['三'], [], ['散'], ['散']],
+    [['三'], [], [], []],
     // sang
     [['桑'], [], [], []],
     // si
@@ -576,10 +560,38 @@
     [[], [], ['伟'], ['卫', '未']]
   ];
 
+  let secondName = undefined, thirdName = undefined;
+
+  document.getElementById('second_name').addEventListener('change', function (e) {
+    secondName = e.target.value;
+    thirdName = undefined;
+  });
+
+  document.getElementById('third_name').addEventListener('change', function (e) {
+    thirdName = e.target.value;
+    secondName = undefined;
+  });
+
+
   function getName(nameLength) {
     let yourName = '刘';
 
+    const isThirdName = nameLength === 2;
+
     while (nameLength > 0) {
+      if (isThirdName) {
+        if (secondName && nameLength === 2) {
+          yourName += secondName;
+          nameLength--;
+          continue;
+        }
+        if (thirdName && nameLength === 1) {
+          yourName += thirdName;
+          nameLength--;
+          continue;
+        }
+      }
+      
       let randomIndex = Math.floor(Math.random() * nameList.length);
       let randomName = nameList[randomIndex].flatMap(t => t);
       let randomNameLength = randomName.length;
@@ -594,7 +606,21 @@
   function getNameBySound(nameLength, sound1, sound2) {
     let yourName = '刘';
 
+    const isThirdName = nameLength === 2;
+
     while (nameLength > 0) {
+      if (isThirdName) {
+        if (secondName && nameLength === 2) {
+          yourName += secondName;
+          nameLength--;
+          continue;
+        }
+        if (thirdName && nameLength === 1) {
+          yourName += thirdName;
+          nameLength--;
+          continue;
+        }
+      }
       let randomIndex = Math.floor(Math.random() * nameList.length);
       let sound = nameLength === 1 ? sound2 : sound1;
       let randomNameWithSound = nameList[randomIndex][sound];
