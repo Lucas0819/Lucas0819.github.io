@@ -60,13 +60,36 @@
 <div class="selection">
   <span>second:</span>
   <select id="second_name">
-    <option value="1">阿</option>
+    <option value="-1">未选择</option>
+    <option value="艾">艾</option>
+    <option value="百">百</option>
+    <option value="品">品</option>
+    <option value="沐">沐</option>
+    <option value="念">念</option>
+    <option value="清">清</option>
+    <option value="小">小</option>
+    <option value="一">一</option>
+    <option value="子">子</option>
   </select>
   <span>third:</span>
   <select id="third_name">
-    <option value="1">阿</option>
+    <option value="-1">未选择</option>
+    <option value="竹">竹</option>
+    <option value="然">然</option>
+    <option value="沫">沫</option>
+    <option value="柠">柠</option>
+    <option value="岚">岚</option>
+    <option value="年">年</option>
+    <option value="麟">麟</option>
+    <option value="洛">洛</option>
+    <option value="航">航</option>
+    <option value="君">君</option>
+    <option value="清">清</option>
+    <option value="歧">歧</option>
+    <option value="夕">夕</option>
+    <option value="玄">玄</option>
   </select>
-  <button onclick="clearFixedName">clear</button>
+  <button onclick="clearFixedName()">clear</button>
 </div>
 <p>My name is <b><span id="name"></span></b></p>
 <!-- TODO 同音换字 -->
@@ -87,7 +110,7 @@
     // bo
     [['玻'], ['博'], [], []],
     // bao
-    [['包'], [], [], []],
+    [[], [], [], []],
     // bei
     [[], [], ['北'], ['贝']],
     // bing
@@ -135,7 +158,7 @@
     // mi
     [[], [], ['米'], []],
     // mu
-    [[], [], [], ['穆', '沐']],
+    [[], [], [], ['沐']],
 
     // fan
     [['帆'], ['凡', '繁'], [], []],
@@ -160,8 +183,6 @@
     [['当'], [], [], ['荡', '宕']],
     // di
     [[], ['迪'], [], ['地', '弟']],
-    // diao
-    [['刁'], [], [], []],
     // ding
     [['丁'], [], ['鼎'], []],
     // dao
@@ -171,7 +192,7 @@
     // deng
     [['登'], [], [], []],
     // die
-    [['蝶', '迭'], [], [], []],
+    [['蝶'], [], [], []],
     // du
     [[], [], [], ['度']],
     // duo
@@ -563,14 +584,31 @@
   let secondName = undefined, thirdName = undefined;
 
   document.getElementById('second_name').addEventListener('change', function (e) {
+    if (e.target.value === '-1') {
+      secondName = undefined;
+      return;
+    }
     secondName = e.target.value;
+    document.getElementById('third_name').value = '-1';
     thirdName = undefined;
   });
 
   document.getElementById('third_name').addEventListener('change', function (e) {
+    if (e.target.value === '-1') {
+      thirdName = undefined;
+      return;
+    }
     thirdName = e.target.value;
+    document.getElementById('second_name').value = '-1';
     secondName = undefined;
   });
+
+  function clearFixedName() {
+    document.getElementById('second_name').value = '-1';
+    secondName = undefined;
+    document.getElementById('third_name').value = '-1';
+    thirdName = undefined;
+  }
 
 
   function getName(nameLength) {
@@ -591,7 +629,7 @@
           continue;
         }
       }
-      
+
       let randomIndex = Math.floor(Math.random() * nameList.length);
       let randomName = nameList[randomIndex].flatMap(t => t);
       let randomNameLength = randomName.length;
